@@ -24,6 +24,8 @@
     
     <button id="downloadTaskButton">下载任务书</button>
     <button id="downloadReportButton">下载开题报告</button>
+    <button id="downloadButton">下载论文（暂未上传）</button>
+    <button id="download">下载项目（暂未上传）</button>
 
     <script>
         document.getElementById('downloadTaskButton').addEventListener('click', function() {
@@ -47,9 +49,10 @@
             a.click();
             document.body.removeChild(a);
         });
-        document.getElementById('downloadReportButton').addEventListener('click', function() {
+        
+        document.getElementById('downloadButton').addEventListener('click', function() {
             // 下载论文
-            const url = '论文.pdf'; // 论文文件名（Word格式）
+            const url = '论文.pdf'; // 论文文件名（pdf格式）
             const a = document.createElement('a');
             a.href = url;
             a.download = '论文.pdf'; // 下载时显示的文件名
@@ -57,6 +60,18 @@
             a.click();
             document.body.removeChild(a);
         });
+        
+        document.getElementById('download').addEventListener('click', function() {
+            // 下载项目
+            const url = '项目.rar'; // 项目文件名（rar格式）
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = '项目.rar'; // 下载时显示的文件名
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+        
     </script>
 </body>
 </html>
