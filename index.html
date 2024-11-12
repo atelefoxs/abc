@@ -47,6 +47,16 @@
             a.click();
             document.body.removeChild(a);
         });
+        document.getElementById('downloadReportButton').addEventListener('click', function() {
+            // 下载论文
+            const url = '论文.pdf'; // 论文文件名（Word格式）
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = '论文.pdf'; // 下载时显示的文件名
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
     </script>
 </body>
 </html>
